@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Хочу, чтобы kill-active-window (Alt+F4) не работал в определенном окне
+# в моем случае - это клиент x2go или удаленный рабочий стол.
+# обычно он у меня завернут на весь экран, и порой кажется, чтобы закрыть
+# приложение, надо нажать на Alt+F4, как я обычно и делаю.
+# Но со стандартными настройками, это просто закроет x2go клиент, что неправильно.
+# Пусть хотя-бы ничего не делает.
+
+ACTIVE_WINDOW_ID=$(xprop -root | awk '/NET_ACTIVE_WINDOW/ { print $5; exit}')
+ACTIVE_WINDOW_CLASS=$(xprop -id $ACTIVE_WINDOW_ID | awk -F\" '/WM_CLASS/ {print $2; exit}')
+echo $ACTIVE_WINDOW_CLASS
+[[ $ACTIVE_WINDOW_CLASS != "NXAgent" ]] && i3-msg kill
