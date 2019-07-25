@@ -205,3 +205,8 @@ bindsym $mod+KP_7      workspace 7
 bindsym $mod+KP_8      workspace 8
 bindsym $mod+KP_9      workspace 9
 bindsym $mod+KP_0      workspace 10
+
+# Окна следующих приложений при запуске не будут привязаны к сетке
+# (если в позже сами не привяжем)
+# За подсказку спасибо: https://habr.com/ru/post/150100/#comment_5082768
+for_window [class="^Geany$" instance="^geany$"] floating enable
