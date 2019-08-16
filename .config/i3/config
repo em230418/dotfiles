@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 set $i3lock_cmd "i3lock --color=282828 --ignore-empty-password"
 
 mode "quit" {
-        bindsym 0 exec $i3lock_cmd; exec "systemctl suspend"
+        bindsym 0 exec $i3lock_cmd; exec "systemctl suspend"; mode "default"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
