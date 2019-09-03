@@ -210,3 +210,5 @@ bindsym $mod+KP_0      workspace 10
 # (если в позже сами не привяжем)
 # За подсказку спасибо: https://habr.com/ru/post/150100/#comment_5082768
 for_window [class="^Geany$" instance="^geany$"] floating enable
+
+exec dunst
