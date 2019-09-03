@@ -1,0 +1,20 @@
+# crontab <file>
+
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                   7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * * command to execute
+
+# хочу свежий youtube-dl
+# находится он у меня в $HOME/bin, поэтому тут рут не нужен
+0 11 * * * $HOME/bin/youtube-dl -U >/dev/null
+
+# хочу, чтобы всплывало уведомление о том, что мало зарядки
+# потому-что если ее очень мало (5%) то ОС виснет нафиг
+*  * * * * $HOME/cron_tasks/battery_warning.sh
+
