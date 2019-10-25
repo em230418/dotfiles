@@ -171,6 +171,11 @@ bindsym Print exec xfce4-screenshooter
 bindsym Control+Mod1+l exec $i3lock_cmd
 bindsym $mod+t exec xfce4-terminal
 
+set $ws_odoo_10 "Odoo 10.0"
+set $ws_odoo_11 "Odoo 11.0"
+set $ws_odoo_12 "Odoo 12.0"
+set $ws_odoo_13 "Odoo 13.0"
+
 workspace 1 output HDMI-1
 workspace 2 output HDMI-1
 workspace 3 output HDMI-1
@@ -181,30 +186,35 @@ workspace 7 output eDP-1
 workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 10 output eDP-1
+workspace $ws_odoo_10 output eDP-1
+workspace $ws_odoo_11 output eDP-1
+workspace $ws_odoo_12 output eDP-1
+workspace $ws_odoo_13 output eDP-1
 
-bindsym $mod+KP_End    workspace 1
-bindsym $mod+KP_Down   workspace 2
-bindsym $mod+KP_Next   workspace 3
-bindsym $mod+KP_Left   workspace 4
-bindsym $mod+KP_Begin  workspace 5
+# bindsym $mod+KP_Left   workspace 4
+# bindsym $mod+KP_Begin  workspace 5
 
-bindsym $mod+KP_Right  workspace 6
-bindsym $mod+KP_Home   workspace 7
-bindsym $mod+KP_Up     workspace 8
-bindsym $mod+KP_Prior  workspace 9
-bindsym $mod+KP_Insert workspace 10
+# bindsym $mod+KP_Right  workspace 6
+# bindsym $mod+KP_Home   workspace 7
+# bindsym $mod+KP_Up     workspace 8
+# bindsym $mod+KP_Prior  workspace 9
 
-bindsym $mod+KP_1      workspace 1
-bindsym $mod+KP_2      workspace 2
-bindsym $mod+KP_3      workspace 3
-bindsym $mod+KP_4      workspace 4
-bindsym $mod+KP_5      workspace 5
+bindsym $mod+KP_Insert workspace $ws_odoo_10
+bindsym $mod+KP_End    workspace $ws_odoo_11
+bindsym $mod+KP_Down   workspace $ws_odoo_12
+bindsym $mod+KP_Next   workspace $ws_odoo_13
 
-bindsym $mod+KP_6      workspace 6
-bindsym $mod+KP_7      workspace 7
-bindsym $mod+KP_8      workspace 8
-bindsym $mod+KP_9      workspace 9
-bindsym $mod+KP_0      workspace 10
+bindsym $mod+KP_1      workspace $ws_odoo_11
+bindsym $mod+KP_2      workspace $ws_odoo_12
+bindsym $mod+KP_3      workspace $wd_odoo_13
+# bindsym $mod+KP_4      workspace 4
+# bindsym $mod+KP_5      workspace 5
+
+# bindsym $mod+KP_6      workspace 6
+# bindsym $mod+KP_7      workspace 7
+# bindsym $mod+KP_8      workspace 8
+# bindsym $mod+KP_9      workspace 9
+# bindsym $mod+KP_0      workspace 10
 
 # Окна следующих приложений при запуске не будут привязаны к сетке
 # (если в позже сами не привяжем)
