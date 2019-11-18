@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+CURRENT_WORKSPACE=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2`
+EXTRA_PARAMS=""
+if [ "$CURRENT_WORKSPACE" = "Odoo 10.0" ]; then
+    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo10"'
+elif [ "$CURRENT_WORKSPACE" = "Odoo 11.0" ]; then
+    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo11"'
+elif [ "$CURRENT_WORKSPACE" = "Odoo 12.0" ]; then
+    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo12"'
+elif [ "$CURRENT_WORKSPACE" = "Odoo 13.0" ]; then
+    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo13"'
+else
+    xfce4-terminal
+fi

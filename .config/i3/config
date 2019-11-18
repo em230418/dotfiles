@@ -169,7 +169,7 @@ bindsym Mod1+F2 exec dmenu_run
 bindsym $mod+m exec xfce4-terminal --command 'mpv --no-video --loop-playlist --shuffle /home/eugene/Music'
 bindsym Print exec xfce4-screenshooter
 bindsym Control+Mod1+l exec $i3lock_cmd
-bindsym $mod+t exec xfce4-terminal
+bindsym $mod+t exec ~/bin/open-terminal
 
 set $ws_odoo_10 "Odoo 10.0"
 set $ws_odoo_11 "Odoo 11.0"
