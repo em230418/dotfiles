@@ -227,11 +227,11 @@ bindsym $mod+x workspace back_and_forth
 exec dunst
 
 
-set $ws_upwork            "Upwork"
-workspace $ws_upwork output eDP-1
-bindsym $mod+u            workspace $ws_upwork
-bindsym $mod+Shift+u      move container to workspace $ws_upwork
-assign [class="^Upwork$"] workspace $ws_upwork
+set       $ws_upwork         "Upwork"
+workspace $ws_upwork         output eDP-1
+bindsym   $mod+u             workspace $ws_upwork
+bindsym   $mod+Shift+u       move container to workspace $ws_upwork
+assign    [class="^Upwork$"] workspace $ws_upwork
 
 
 bindsym $mod+F9 exec "x2goclient --session=x2gomazafaka"
