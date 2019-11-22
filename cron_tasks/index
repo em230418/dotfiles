@@ -18,3 +18,5 @@
 # потому-что если ее очень мало (5%) то ОС виснет нафиг
 *  * * * * $HOME/cron_tasks/battery_warning.sh
 
+# пусть время показывает каждый час
+0  * * * * $HOME/cron_tasks/notify_time.sh
