@@ -80,7 +80,7 @@
    (jedi:setup)
    (set-my-binds python-mode-map)
    (define-key python-mode-map (kbd "C-p") 'jedi:goto-definition)
-   (define-key python-mode-map (kbd "C-i") 'jedi:show-doc)
+   (define-key python-mode-map (kbd "C-j") 'jedi:show-doc)
    (define-key python-mode-map (kbd "C-M-p") 'jedi:goto-definition-pop-marker)
    ))
 
