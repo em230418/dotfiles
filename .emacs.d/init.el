@@ -13,6 +13,16 @@
 ;; https://youtu.be/6BlTGPsjGJk?t=21m19s
 (setq ac-show-menu-immediately-on-auto-complete t)
 
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+  )
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -33,6 +43,7 @@
 (defun set-my-binds (map)
   (interactive)
   (set-nano-like-config map)
+  (define-key map (kbd "C-d") 'duplicate-line)
   (define-key map (kbd "<M-left>") 'ido-switch-buffer)
   (define-key map (kbd "<M-right>") 'ace-window)
   (define-key map (kbd "M-k") 'kill-this-buffer)
