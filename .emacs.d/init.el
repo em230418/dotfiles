@@ -9,6 +9,9 @@
 (require 'jedi)
 (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
+(require 'ac-php)
+(add-to-list 'ac-sources 'ac-sources-php)
+
 ;; что это?
 ;; https://youtu.be/6BlTGPsjGJk?t=21m19s
 (setq ac-show-menu-immediately-on-auto-complete t)
@@ -84,11 +87,24 @@
    (define-key python-mode-map (kbd "C-M-p") 'jedi:goto-definition-pop-marker)
    ))
 
+(add-hook
+ 'php-mode-hook
+ (lambda()
+   (auto-complete-mode 1)
+   (set-my-binds php-mode-map)
+   (define-key php-mode-map (kbd "C-p") 'ac-php-find-symbol-at-point)
+   (define-key php-mode-map (kbd "C-M-p") 'ac-php-location-stack-back)
+   (define-key php-mode-map (kbd "C-j") 'ac-php-show-tip)
+   (define-key php-mode-map (kbd "<f12> 1") 'ac-php-remake-tags-all)
+   ))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
