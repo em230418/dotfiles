@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: odoo_xml_attribute
+# key: att
+# --
+<attribute name="$1">$0</attribute>

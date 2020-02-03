@@ -12,6 +12,12 @@
 (require 'ac-php)
 (add-to-list 'ac-sources 'ac-sources-php)
 
+(require 'ido)
+(ido-mode t)
+
+(yas-global-mode)
+(menu-bar-mode -1)
+
 ;; что это?
 ;; https://youtu.be/6BlTGPsjGJk?t=21m19s
 (setq ac-show-menu-immediately-on-auto-complete t)

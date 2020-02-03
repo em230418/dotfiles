@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: odoo xml xpath
+# key: xpp
+# --
+<xpath expr="$1" position="${2:$$(yas-choose-value '("inside" "before" "after" "attributes" "replace"))}">
+    $0
+</xpath>

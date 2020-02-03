@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: wdb
+# key: wdb
+# --
+import wdb; wdb.set_trace()
