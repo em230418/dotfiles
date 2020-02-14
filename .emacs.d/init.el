@@ -22,6 +22,9 @@
 ;; https://youtu.be/6BlTGPsjGJk?t=21m19s
 (setq ac-show-menu-immediately-on-auto-complete t)
 
+(setq csv-separators '(","))  ;; csv-align-fields, если че
+
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
