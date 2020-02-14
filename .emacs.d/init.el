@@ -81,6 +81,11 @@
 
 
 (add-hook
+ 'before-save-hook
+ 'delete-trailing-whitespace
+ )
+
+(add-hook
  'js-mode-hook
  (lambda ()
    (set-my-binds js-mode-map)
