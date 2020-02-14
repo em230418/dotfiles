@@ -35,6 +35,11 @@
   (yank)
   )
 
+(defun list-definitions-python ()
+  (interactive)
+  (occur "class\\|def")
+  )
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -99,6 +104,7 @@
    (define-key python-mode-map (kbd "C-p") 'jedi:goto-definition)
    (define-key python-mode-map (kbd "C-j") 'jedi:show-doc)
    (define-key python-mode-map (kbd "C-M-p") 'jedi:goto-definition-pop-marker)
+   (define-key python-mode-map (kbd "<f9>") 'list-definitions-python)
    ))
 
 (add-hook
