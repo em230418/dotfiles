@@ -20,3 +20,7 @@
 
 # пусть время показывает каждый час
 0  * * * * $HOME/cron_tasks/notify_time.sh
+
+# время перерыва
+55  * * * * $HOME/cron_tasks/notify_time.sh Перерыв
+
