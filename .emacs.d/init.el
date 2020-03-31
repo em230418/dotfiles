@@ -1,3 +1,4 @@
+
 (require 'package)
 (add-to-list 'package-archives '("elpa" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
@@ -40,6 +41,12 @@
   (occur "class\\|def")
   )
 
+(defun kill-this-buffer-delete-window ()
+  (interactive)
+  (kill-this-buffer)
+  (delete-window)
+  )
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -65,7 +72,9 @@
   (define-key map (kbd "<M-right>") 'ace-window)
   (define-key map (kbd "M-k") 'kill-this-buffer)
   (define-key map (kbd "M-l") 'list-buffers)
-  (define-key map (kbd "C-M-k") 'kill-line))
+  (define-key map (kbd "C-M-k") 'kill-line)
+  (define-key map (kbd "C-x d") 'kill-this-buffer-delete-window)
+  )
 
 (set-my-binds global-map)
 
