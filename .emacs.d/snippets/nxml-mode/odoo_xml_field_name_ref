@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: odoo_xml_field_name_ref
+# key: fnr
+# --
+<field name="$1" ref="$2" />

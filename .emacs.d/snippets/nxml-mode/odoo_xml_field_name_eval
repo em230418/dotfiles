@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: odoo_xml_field_name_eval
+# key: fne
+# --
+<field name="$1" eval="$2" />$0
