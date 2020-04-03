@@ -231,7 +231,7 @@ bindsym $mod+Shift+KP_3      move container to workspace $ws_odoo_13
 # Окна следующих приложений при запуске не будут привязаны к сетке
 # (если в позже сами не привяжем)
 # За подсказку спасибо: https://habr.com/ru/post/150100/#comment_5082768
-for_window [class="^Geany$" instance="^geany$"] floating enable
+# for_window [class="^Geany$" instance="^geany$"] floating enable
 
 bindsym $mod+x workspace back_and_forth
 exec dunst
