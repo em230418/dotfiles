@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-cd ~/Projects/c11
-source ~/.virtualenvs/e11/bin/activate
-export HISTFILE=~/e/11.history
+source ~/.profile
+source ~/.emacs.d/.python-environments/c11/bin/activate
+cd ~/Projects/docker-odoo-11
+export HISTFILE=~/e/bash_history/11

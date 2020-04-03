@@ -5,11 +5,11 @@ EXTRA_PARAMS=""
 if [ "$CURRENT_WORKSPACE" = "Odoo 10.0" ]; then
     xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo10"'
 elif [ "$CURRENT_WORKSPACE" = "Odoo 11.0" ]; then
-    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo11"'
+    xfce4-terminal --command "/bin/bash --rcfile $HOME/e/11.bash"
 elif [ "$CURRENT_WORKSPACE" = "Odoo 12.0" ]; then
-    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo12"'
+    xfce4-terminal --command "/bin/bash --rcfile $HOME/e/12.bash"
 elif [ "$CURRENT_WORKSPACE" = "Odoo 13.0" ]; then
-    xfce4-terminal --command 'ssh -t remote "/bin/bash --rcfile /home/noroot/.rcodoo13"'
+    xfce4-terminal --command "/bin/bash --rcfile $HOME/e/13.bash"
 else
     xfce4-terminal
 fi
