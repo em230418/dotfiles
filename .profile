@@ -26,5 +26,9 @@ alias yd="youtube-dl --format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a
 alias auau='sudo apt-get update && sudo apt-get upgrade'  # надо регулярно обновляться
 alias tb="nc termbin.com 9999"
 
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+alias dcr="docker-compose run"
+
 export PATH="$HOME/.cargo/bin:$PATH"
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
