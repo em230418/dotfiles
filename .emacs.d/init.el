@@ -5,6 +5,7 @@
 
 (require 'auto-complete-config)
 (ac-config-default)
+(setq-default ac-ignore-case nil)
 
 (require 'jedi)
 (add-to-list 'ac-sources 'ac-source-jedi-direct)
