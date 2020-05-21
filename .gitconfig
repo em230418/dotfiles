@@ -1,0 +1,23 @@
+[user]
+	name = Eugene Molotov
+	email = molotov@it-projects.info
+
+[core]
+	editor = emacs
+
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[alias]
+	rv = remote -v
+        s = status
+        c = commit
+        cf = commit --fixup
+        cn = commit --no-verify
+        dc = diff --cached
+        lfcp = log --format=format:%H --reverse  # lfcp = log for cherry-pick
+        rih2 = rebase -i HEAD~2
+        cpc = cherry-pick --continue
+        cpa = cherry-pick --abort
+        cp = cherry-pick
