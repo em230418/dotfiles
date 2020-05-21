@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rim
+# key: rim
+# --
+<record id="$1" model="$2">
+    $0
+</record>
