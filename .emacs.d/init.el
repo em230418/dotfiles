@@ -7,6 +7,9 @@
 (ac-config-default)
 (setq-default ac-ignore-case nil)
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
+
 (require 'jedi)
 (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
@@ -147,6 +150,12 @@
    (define-key php-mode-map (kbd "C-j") 'ac-php-show-tip)
    (define-key php-mode-map (kbd "<f12> 1") 'ac-php-remake-tags-all)
    ))
+
+(add-hook
+ 'web-mode-hook
+ (lambda()
+   ))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
