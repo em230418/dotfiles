@@ -153,7 +153,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
+    (dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
