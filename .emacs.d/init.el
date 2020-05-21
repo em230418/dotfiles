@@ -1,4 +1,3 @@
-
 (require 'package)
 (add-to-list 'package-archives '("elpa" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
@@ -25,6 +24,24 @@
 
 (setq csv-separators '(","))  ;; csv-align-fields, если че
 
+
+;; Спасибо этому ресурсу: https://emacsredux.com/blog/2013/04/02/move-current-line-up-or-down/
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode)
+  )
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode)
+  )
 
 (defun duplicate-line()
   (interactive)
@@ -74,6 +91,8 @@
   (define-key map (kbd "M-l") 'list-buffers)
   (define-key map (kbd "C-M-k") 'kill-line)
   (define-key map (kbd "C-x d") 'kill-this-buffer-delete-window)
+  (define-key map (kbd "<C-M-down>") 'move-line-down)
+  (define-key map (kbd "<C-M-up>") 'move-line-up)
   )
 
 (set-my-binds global-map)
@@ -86,6 +105,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setq nxml-child-indent 4 nxml-attribute-indent 4)
+
 
 ;; не надо сохранять все в рабочей директории
 (setq backup-directory-alist
