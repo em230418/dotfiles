@@ -30,5 +30,6 @@ alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 alias dcr="docker-compose run"
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
+export NPM_CONFIG_PREFIX=~/.npm-global
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
