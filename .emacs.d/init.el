@@ -95,6 +95,7 @@
   (define-key map (kbd "M-l") 'list-buffers)
   (define-key map (kbd "C-M-k") 'kill-line)
   (define-key map (kbd "C-x d") 'kill-this-buffer-delete-window)
+  (define-key map (kbd "<M-f9>") 'eshell)
   (define-key map (kbd "<C-M-down>") 'move-line-down)
   (define-key map (kbd "<C-M-up>") 'move-line-up)
   )
