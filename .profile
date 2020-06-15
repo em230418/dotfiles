@@ -29,6 +29,7 @@ alias tb="nc termbin.com 9999"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 alias dcr="docker-compose run"
+alias dc="docker-compose"
 
 export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
 export NPM_CONFIG_PREFIX=~/.npm-global
