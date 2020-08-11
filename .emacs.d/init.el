@@ -10,6 +10,9 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
 
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 (require 'jedi)
 (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
@@ -171,6 +174,9 @@ Version 2016-06-19"
  'js-mode-hook
  (lambda ()
    (set-my-binds js-mode-map)
+   (define-key js-mode-map (kbd "C-p") 'js2-jump-to-definition)
+   (setq js-indent-level 4)
+   (flycheck-mode)
    ))
 
 (add-hook
@@ -208,7 +214,7 @@ Version 2016-06-19"
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
+    (js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
