@@ -3,6 +3,10 @@
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
+(load-file "~/.emacs.d/rtags/src/rtags.el")
+(setq rtags-rdm-binary-name "~/.emacs.d/rtags/bin/rdm")
+(setq rtags-rc-binary-name "~/.emacs.d/rtags/bin/rc")
+
 (require 'auto-complete-config)
 (ac-config-default)
 (setq-default ac-ignore-case nil)
@@ -207,6 +211,14 @@ Version 2016-06-19"
  (lambda()
    ))
 
+(add-hook
+ 'c-mode-hook
+ (lambda ()
+   (rtags-start-process-unless-running)
+   (set-my-binds c-mode-map)
+   (define-key c-mode-map (kbd "C-p") 'rtags-find-symbol-at-point)
+   ))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -214,7 +226,7 @@ Version 2016-06-19"
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
+    (ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
