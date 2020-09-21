@@ -164,7 +164,7 @@ bar {
         status_command i3status
 }
 
-bindsym Mod1+F4 exec ~/bin/kill-active-window
+bindsym Mod1+F4 kill
 bindsym Mod1+F2 exec dmenu_run
 bindsym $mod+m exec xfce4-terminal --command 'mpv --no-video --loop-playlist --shuffle /home/eugene/Music'
 bindsym Print exec xfce4-screenshooter
