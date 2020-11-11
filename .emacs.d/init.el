@@ -11,6 +11,8 @@
 (ac-config-default)
 (setq-default ac-ignore-case nil)
 
+(load-file "~/.emacs.d/termbin.el")
+
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
 
@@ -148,6 +150,7 @@ Version 2016-06-19"
   (define-key map (kbd "<M-f9>") 'eshell)
   (define-key map (kbd "<C-M-down>") 'move-line-down)
   (define-key map (kbd "<C-M-up>") 'move-line-up)
+  (define-key map (kbd "<M-f6>") 'yf/termbin)
   )
 
 (set-my-binds global-map)
