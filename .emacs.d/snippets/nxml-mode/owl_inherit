@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: owl_inherit
+# key: inherit
+# --
+<t t-name="$1" t-inherit="$2.$1" t-inherit-mode="extension" owl="1">
+    $0
+</t>
