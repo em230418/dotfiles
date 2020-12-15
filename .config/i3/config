@@ -253,3 +253,6 @@ assign    [class="^Upwork$"] workspace $ws_upwork
 bindsym $mod+F9 exec "x2goclient --session=x2gomazafaka"
 assign [title="^x2gomazafaka$"] workspace 4
 assign [title="^X2Go Client$"] workspace 10
+
+bindsym $mod+F1 exec "palemoon -P eugene"
+bindsym $mod+F6 exec "simplescreenrecorder"
