@@ -177,15 +177,15 @@ set $ws_odoo_12 "Odoo 12.0"
 set $ws_odoo_13 "Odoo 13.0"
 set $ws_odoo_14 "Odoo 14.0"
 
-workspace 1 output HDMI-1
-workspace 2 output HDMI-1
-workspace 3 output HDMI-1
-workspace 4 output HDMI-1
-workspace 5 output HDMI-1
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+workspace 4 output eDP-1
+workspace 5 output eDP-1
+workspace 6 output HDMI-1
+workspace 7 output HDMI-1
+workspace 8 output HDMI-1
+workspace 9 output HDMI-1
 workspace 10 output eDP-1
 workspace $ws_odoo_10 output eDP-1
 workspace $ws_odoo_11 output eDP-1
