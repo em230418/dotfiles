@@ -3,9 +3,9 @@
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(load-file "~/.emacs.d/rtags/src/rtags.el")
-(setq rtags-rdm-binary-name "~/.emacs.d/rtags/bin/rdm")
-(setq rtags-rc-binary-name "~/.emacs.d/rtags/bin/rc")
+; (load-file "~/.emacs.d/rtags/src/rtags.el")
+; (setq rtags-rdm-binary-name "~/.emacs.d/rtags/bin/rdm")
+; (setq rtags-rc-binary-name "~/.emacs.d/rtags/bin/rc")
 
 (require 'auto-complete-config)
 (ac-config-default)
@@ -24,6 +24,9 @@
 
 (require 'ac-php)
 (add-to-list 'ac-sources 'ac-sources-php)
+
+; (require 'ac-rtags)
+; (add-to-list 'ac-sources 'ac-sources-rtags)
 
 (require 'ido)
 (ido-mode t)
