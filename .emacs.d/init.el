@@ -84,6 +84,28 @@ Version 2016-06-19"
         (progn (setq i 100))))))
 
 
+(defun xah-next-emacs-buffer ()
+  "Switch to the next emacs buffer.
+“emacs buffer” here is buffer whose name starts with *.
+URL `http://ergoemacs.org/emacs/elisp_next_prev_user_buffer.html'
+Version 2016-06-19"
+  (interactive)
+  (next-buffer)
+  (let ((i 0))
+    (while (and (not (string-equal "*" (substring (buffer-name) 0 1))) (< i 20))
+      (setq i (1+ i)) (next-buffer))))
+
+(defun xah-previous-emacs-buffer ()
+  "Switch to the previous emacs buffer.
+“emacs buffer” here is buffer whose name starts with *.
+URL `http://ergoemacs.org/emacs/elisp_next_prev_user_buffer.html'
+Version 2016-06-19"
+  (interactive)
+  (previous-buffer)
+  (let ((i 0))
+    (while (and (not (string-equal "*" (substring (buffer-name) 0 1))) (< i 20))
+      (setq i (1+ i)) (previous-buffer))))
+
 ;; Спасибо этому ресурсу: https://emacsredux.com/blog/2013/04/02/move-current-line-up-or-down/
 (defun move-line-up ()
   "Move up the current line."
@@ -154,6 +176,8 @@ Version 2016-06-19"
   (define-key map (kbd "<C-M-down>") 'move-line-down)
   (define-key map (kbd "<C-M-up>") 'move-line-up)
   (define-key map (kbd "<M-f6>") 'yf/termbin-region)
+  (define-key map (kbd "<C-f6>") 'xah-previous-emacs-buffer)
+  (define-key map (kbd "<C-f7>") 'xah-next-emacs-buffer)
   )
 
 (set-my-binds global-map)
