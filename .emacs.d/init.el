@@ -245,18 +245,55 @@ Version 2016-06-19"
  'c-mode-hook
  (lambda ()
    (rtags-start-process-unless-running)
+   (setq c-basic-offset 4)
    (set-my-binds c-mode-map)
    (define-key c-mode-map (kbd "C-p") 'rtags-find-symbol-at-point)
    ))
+
+(add-hook
+ 'c++-mode-hook
+ (lambda ()
+   (rtags-start-process-unless-running)
+   (setq c-basic-offset 4)
+   (setq c-default-style "cc-mode")
+   (setq flycheck-clang-include-path (list "/usr/include/python3.7m"))
+   (set-my-binds c++-mode-map)
+   (define-key c++-mode-map (kbd "C-p") 'rtags-find-symbol-at-point)
+   ))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook
+ 'typescript-mode-hook
+ (lambda()
+   (tide-setup)
+   (flycheck-mode +1)
+   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+   (eldoc-mode +1)
+   (tide-hl-identifier-mode +1)
+   (company-mode +1)
+   (set-my-binds typescript-mode-map)
+   (define-key typescript-mode-map (kbd "C-p") 'tide-jump-to-definition)
+   (define-key typescript-mode-map (kbd "C-M-p") 'tide-jump-back)
+ ))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
+    (company tide ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
