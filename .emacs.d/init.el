@@ -145,6 +145,29 @@ Version 2016-06-19"
   (delete-window)
   )
 
+(defun indent-this-line-and-go-to-next ()
+  (interactive)
+  (indent-for-tab-command)
+  (next-line)
+  (move-beginning-of-line)
+  )
+
+(defun search-selection (beg end)
+  "search for selected text"
+  (interactive "r")
+  (kill-ring-save beg end)
+  (isearch-mode t nil nil nil)
+  (isearch-yank-pop)
+  )
+
+(defun odoo-owl-pos-switch-js-xml()
+  (interactive)
+  (let ((file-name (buffer-file-name (current-buffer))))
+    (if file-name
+        (cond ((string-match "js$" file-name) (find-file (replace-regexp-in-string "js" "xml" file-name)))
+              ((string-match "xml$" file-name) (find-file (replace-regexp-in-string "xml" "js" file-name)))
+              (t nil)))))
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -178,6 +201,11 @@ Version 2016-06-19"
   (define-key map (kbd "<M-f6>") 'yf/termbin-region)
   (define-key map (kbd "<C-f6>") 'xah-previous-emacs-buffer)
   (define-key map (kbd "<C-f7>") 'xah-next-emacs-buffer)
+  (define-key map (kbd "<C-f8>") 'indent-this-line-and-go-to-next)
+  (define-key map (kbd "C-a") nil)
+  (define-key map (kbd "C-a s") 'search-selection)
+  (define-key map (kbd "C-a <f2>") 'eval-expression)
+  (define-key map (kbd "C-a <left>") 'odoo-owl-pos-switch-js-xml)
   )
 
 (set-my-binds global-map)
