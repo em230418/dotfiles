@@ -321,7 +321,7 @@ Version 2016-06-19"
  '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (company tide ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
+    (expand-region company tide ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
  '(safe-local-variable-values
    (quote
     ((backward-delete-char-untabify-method quote hungry)))))
