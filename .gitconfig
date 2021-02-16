@@ -13,8 +13,8 @@
 [alias]
 	rv = remote -v
         s = status
-        c = commit
-        cf = commit --fixup
+        c = commit --no-gpg-sign
+        cf = commit --no-gpg-sign --fixup
         cn = commit --no-verify
         dc = diff --cached
         lfcp = log --format=format:%H --reverse  # lfcp = log for cherry-pick
