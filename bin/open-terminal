@@ -2,7 +2,9 @@
 
 CURRENT_WORKSPACE=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2`
 EXTRA_PARAMS=""
-if [ "$CURRENT_WORKSPACE" = "Odoo 10.0" ]; then
+if [ "$CURRENT_WORKSPACE" = "Odoo 9.0" ]; then
+    xfce4-terminal --command "/bin/bash --rcfile $HOME/e/9.bash"
+elif [ "$CURRENT_WORKSPACE" = "Odoo 10.0" ]; then
     xfce4-terminal --command "/bin/bash --rcfile $HOME/e/10.bash"
 elif [ "$CURRENT_WORKSPACE" = "Odoo 11.0" ]; then
     xfce4-terminal --command "/bin/bash --rcfile $HOME/e/11.bash"
