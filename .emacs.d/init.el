@@ -168,6 +168,14 @@ Version 2016-06-19"
               ((string-match "xml$" file-name) (find-file (replace-regexp-in-string "xml" "js" file-name)))
               (t nil)))))
 
+(defun odoo-wizard-switch-py-xml()
+  (interactive)
+  (let ((file-name (buffer-file-name (current-buffer))))
+    (if file-name
+        (cond ((string-match "py$" file-name) (find-file (replace-regexp-in-string "py" "xml" file-name)))
+              ((string-match "xml$" file-name) (find-file (replace-regexp-in-string "xml" "py" file-name)))
+              (t nil)))))
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -206,6 +214,7 @@ Version 2016-06-19"
   (define-key map (kbd "C-a s") 'search-selection)
   (define-key map (kbd "C-a <f2>") 'eval-expression)
   (define-key map (kbd "C-a <left>") 'odoo-owl-pos-switch-js-xml)
+  (define-key map (kbd "C-a w") 'odoo-wizard-switch-py-xml)
   )
 
 (set-my-binds global-map)
