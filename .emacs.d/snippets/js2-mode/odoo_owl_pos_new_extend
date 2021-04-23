@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: odoo_owl_pos_new_extend
+# key: owl_pos_new_extend
+# --
+odoo.define('$1.$2', function (require) {
+    'use strict';
+
+    const $4 = require('$3.$4');
+    const Registries = require('point_of_sale.Registries');
+
+    const $2 = ($4) => {
+        class $2 extends $4 {
+            constructor() {
+                super(...arguments);
+            }
+        }
+        $2.template = '$2';
+        return $2;
+    };
+
+    Registries.Component.addByExtending($2, $4);
+
+    return $2;
+});

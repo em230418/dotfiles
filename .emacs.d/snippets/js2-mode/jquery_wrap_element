@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: jquery_wrap_element
+# key: jwe
+# --
+var \$$1 = \$\($1\)

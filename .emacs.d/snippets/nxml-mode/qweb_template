@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: qweb_template
-# key: template
+# key: qweb_start
 # --
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">

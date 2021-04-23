@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: code-block:: sh
+# key: cbsh
+# --
+.. code-block:: sh
+
+   $0

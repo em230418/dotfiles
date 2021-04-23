@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: odoo_act_window
+# key: act_window
+# --
+<record id="action_$1" model="ir.actions.act_window">
+    <field name="name">$2</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">$3</field>
+    <field name="view_mode">${4:$$(yas-choose-value '("tree" "form"))}</field>
+</record>
+
+<record id="action_$1_$4" model="ir.actions.act_window.view">
+    <field name="view_mode">$4</field>
+    <field name="act_window_id" ref="action_$1" />
+</record>

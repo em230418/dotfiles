@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: odoo_xml_field_name
+# key: fn
+# --
+<field name="$1" />$0

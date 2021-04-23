@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: odoo_xml_start
+# key: xml_start
+# --
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+</odoo>
