@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+MODULE_NAME=`echo $1 | sed 's/\///g'`
+DATE=`date +%Y-%m-%d`
+PACKAGE_NAME="${MODULE_NAME}_${DATE}"
+tar cvf $PACKAGE_NAME.tar $MODULE_NAME/
+gzip $PACKAGE_NAME.tar
