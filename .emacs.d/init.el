@@ -272,6 +272,7 @@ Version 2016-06-19"
  'php-mode-hook
  (lambda()
    (auto-complete-mode 1)
+   (tab-width 4)
    (set-my-binds php-mode-map)
    (define-key php-mode-map (kbd "C-p") 'ac-php-find-symbol-at-point)
    (define-key php-mode-map (kbd "C-M-p") 'ac-php-location-stack-back)
