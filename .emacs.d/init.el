@@ -248,6 +248,14 @@ Version 2016-06-19"
  )
 
 (add-hook
+ 'smerge-mode-hook
+ (lambda ()
+   (set-my-binds smerge-mode-map)
+   (define-key smerge-mode-map (kbd "C-a <up>") 'smerge-keep-upper)
+   (define-key smerge-mode-map (kbd "C-a <down>") 'smerge-keep-lower)
+   ))
+
+(add-hook
  'js-mode-hook
  (lambda ()
    (set-my-binds js-mode-map)
