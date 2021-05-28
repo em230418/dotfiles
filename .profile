@@ -35,7 +35,7 @@ parse_git_branch() {
      git cb 2>/dev/null | sed -e 's/\(.*\)/(\1)/'
 }
 
-export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.config/composer/vendor/bin:$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
 export NPM_CONFIG_PREFIX=~/.npm-global
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)\n\$ '
 
