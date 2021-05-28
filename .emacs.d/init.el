@@ -343,6 +343,10 @@ Version 2016-06-19"
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (manoj-dark)))
+ '(js-indent-level 2)
+ '(magit-process-password-prompt-regexps
+   (quote
+    ("^\\(Enter \\)?[Pp]assphrase\\( for \\(RSA \\)?key '.*'\\)?: ?$" "^\\(Enter \\)?[Pp]assword\\( for '\\(https?://\\)?\\(?99:.*\\)'\\)?: ?$" "^.*'s password: ?$" "^Yubikey for .*: ?$" "^Enter PIN for .*: ?$" "^Введите фразу-пароль:?$")))
  '(package-selected-packages
    (quote
     (expand-region company tide ac-rtags magit js2-mode dockerfile-mode flycheck web-mode rust-mode ac-php yaml-mode yasnippet-classic-snippets virtualenvwrapper php-mode jedi csv-mode ace-window)))
