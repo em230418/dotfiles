@@ -176,6 +176,11 @@ Version 2016-06-19"
               ((string-match "xml$" file-name) (find-file (replace-regexp-in-string "xml" "py" file-name)))
               (t nil)))))
 
+(defun odoo-docker-compose-go-to-i ()
+  (interactive)
+  (search-forward "'-i',")
+  )
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -215,6 +220,7 @@ Version 2016-06-19"
   (define-key map (kbd "C-a <f2>") 'eval-expression)
   (define-key map (kbd "C-a <left>") 'odoo-owl-pos-switch-js-xml)
   (define-key map (kbd "C-a w") 'odoo-wizard-switch-py-xml)
+  (define-key map (kbd "C-a d c i") 'odoo-docker-compose-go-to-i)
   )
 
 (set-my-binds global-map)
