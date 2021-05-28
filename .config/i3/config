@@ -150,7 +150,8 @@ bindsym $mod+r mode "resize"
 set $i3lock_cmd "i3lock --color=282828 --ignore-empty-password"
 
 mode "quit" {
-        bindsym 0 exec $i3lock_cmd; exec "systemctl suspend"; exec "pkill -f x2goclient"; mode "default"
+#        bindsym 0 exec $i3lock_cmd; exec "systemctl suspend"; mode "default"
+        bindsym 0 exec "systemctl suspend"; mode "default"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -265,10 +266,6 @@ bindsym   $mod+u             workspace $ws_upwork
 bindsym   $mod+Shift+u       move container to workspace $ws_upwork
 assign    [class="^Upwork$"] workspace $ws_upwork
 
-
-bindsym $mod+F9 exec "x2goclient --session=x2gomazafaka"
-assign [title="^x2gomazafaka$"] workspace 4
-assign [title="^X2Go Client$"] workspace 10
 
 bindsym $mod+F1 exec "palemoon -P eugene"
 bindsym $mod+F6 exec "simplescreenrecorder"
