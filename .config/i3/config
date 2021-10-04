@@ -162,6 +162,8 @@ bindsym $mod+Home mode "quit"
 mode "screens" {
         bindsym Right exec "hdmi-to-the-right"; mode "default"
         bindsym Left exec "hdmi-off"; mode "default"
+        bindsym F5 exec "sudo /home/eugene/bin/main-screen-dark"; mode "default"
+        bindsym F6 exec "sudo /home/eugene/bin/main-screen-bright"; mode "default
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
