@@ -4,3 +4,4 @@ DATE=`date +%Y-%m-%d`
 PACKAGE_NAME="${MODULE_NAME}_${DATE}"
 tar cvf $PACKAGE_NAME.tar $MODULE_NAME/
 gzip $PACKAGE_NAME.tar
+mv $PACKAGE_NAME.tar.gz ~/tmp
