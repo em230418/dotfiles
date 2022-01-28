@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source ~/.profile
-source ~/.emacs.d/.python-environments/c14/bin/activate
+source /opt/odoo-projects/14.0/venv/bin/activate
 set-title 14.0
-cd ~/Projects/docker-odoo-14
+cd /opt/odoo-projects/14.0/projects
 export HISTFILE=~/e/bash_history/14
