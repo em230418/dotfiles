@@ -1,7 +1,7 @@
 [user]
 	name = Eugene Molotov
 	email = molotov@it-projects.info
-	signingkey = CBCD39F888D3E17B
+	signingkey = 6366EB6832F50589132FFE63D656FCE7543D05F9
 
 [core]
 	editor = emacs
