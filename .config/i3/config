@@ -276,4 +276,5 @@ assign    [class="^Upwork$"] workspace $ws_upwork
 
 
 bindsym $mod+F1 exec "palemoon -P eugene"
+bindsym $mod+F2 exec "palemoon -P default"
 bindsym $mod+F6 exec "simplescreenrecorder"
