@@ -14,6 +14,8 @@ elif [ "$CURRENT_WORKSPACE" = "Odoo 13.0" ]; then
     xfce4-terminal --command "/bin/bash --rcfile $HOME/e/13.bash"
 elif [ "$CURRENT_WORKSPACE" = "Odoo 14.0" ]; then
     xfce4-terminal --command "/bin/bash --rcfile $HOME/e/14.bash"
+elif [ "$CURRENT_WORKSPACE" = "Odoo 15.0" ]; then
+    xfce4-terminal --command "/bin/bash --rcfile $HOME/e/15.bash"
 else
     xfce4-terminal
 fi
