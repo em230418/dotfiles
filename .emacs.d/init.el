@@ -181,6 +181,12 @@ Version 2016-06-19"
   (search-forward "'-i',")
   )
 
+(defun run-linter-black ()
+  (interactive)
+  (shell-command (concat "black " buffer-file-name))
+  (revert-buffer)
+  )
+
 (defun set-nano-like-config (map)
   (interactive)
   (define-key isearch-mode-map "\C-w" 'isearch-repeat-forward)
@@ -274,6 +280,7 @@ Version 2016-06-19"
    (define-key python-mode-map (kbd "C-j") 'jedi:show-doc)
    (define-key python-mode-map (kbd "C-M-p") 'jedi:goto-definition-pop-marker)
    (define-key python-mode-map (kbd "<f9>") 'list-definitions-python)
+   (define-key python-mode-map (kbd "C-a r l") 'run-linter-black)
    ))
 
 (add-hook
