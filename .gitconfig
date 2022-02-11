@@ -26,3 +26,5 @@
         dff = "!f() { git diff \"$1^\" \"$1\"; }; f"
         dffn = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
         cmsave = commit -m "saved" --no-gpg-sign
+[pull]
+	rebase = false
