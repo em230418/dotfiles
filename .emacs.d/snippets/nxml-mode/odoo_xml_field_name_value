@@ -2,4 +2,4 @@
 # name: odoo_xml_field_name_value
 # key: fnv
 # --
-<field name="$1">$0</field>
+<field name="$1">$2</field>$0
