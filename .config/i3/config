@@ -179,7 +179,7 @@ bar {
 
 bindsym Mod1+F4 kill
 bindsym Mod1+F2 exec dmenu_run
-bindsym $mod+m exec xfce4-terminal --command 'mpv --no-video --loop-playlist --shuffle /home/eugene/Music'
+bindsym $mod+m exec xterm -e '/home/eugene/Music/radio_brutal80sbeats'
 bindsym Print exec xfce4-screenshooter
 bindsym Control+Mod1+l exec $i3lock_cmd
 bindsym $mod+t exec ~/bin/open-terminal
