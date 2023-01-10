@@ -31,13 +31,13 @@
 (defgroup yf/termbin nil
   "Group for customizing termbin.el")
 
-(defcustom yf/termbin-host "eugenemolotov.ru"
+(defcustom yf/termbin-host "termbin.eugenemolotov.ru"
   "Address for termbin.com"
   :group 'yf/termbin)
 (defcustom yf/termbin-port 9999
   "Port number for termbin.com"
   :group 'yf/termbin)
-(defcustom yf/termbin-url-regexp "\\(https://eugenemolotov.ru/termbin/[[:alnum:]]+\\)\n\0"
+(defcustom yf/termbin-url-regexp "\\(https://termbin.eugenemolotov.ru/termbin/[[:alnum:]]+\\)\n\0"
   "Regular expression for the returned URL"
   :group 'yf/termbin)
 
