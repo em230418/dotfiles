@@ -2,7 +2,7 @@
 # name: odoo_new_form
 # key: new_form
 # --
-<record id="$2_view_tree" model="ir.ui.view">
+<record id="$2_view_form" model="ir.ui.view">
     <field name="name">$1.form.view</field>
     <field name="model">$1</field>
     <field name="arch" type="xml">
