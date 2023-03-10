@@ -1,0 +1,8 @@
+u docker-compose up odoo
+  docker-compose up odoo
+d docker-compose down
+  docker-compose down
+p odoo db
+  PGPASSWORD=odoo psql -h localhost -p 5433 postgres odoo
+s odoo shell
+  docker-compose run --rm odoo shell
