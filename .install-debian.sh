@@ -6,4 +6,5 @@ apt update
 
 apt install -y brave-browser
 apt install -y \
+    gnupg \
     python3-pip
