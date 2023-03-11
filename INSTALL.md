@@ -23,3 +23,11 @@ git checkout origin/master -ft
 bash .install.sh
 
 ```
+
+Под рутом для Debian:
+
+```
+
+bash .install-brave.sh
+
+```
