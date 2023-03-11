@@ -6,5 +6,7 @@ apt update
 
 apt install -y brave-browser
 apt install -y \
+    docker.io \
+    docker-compose \
     gnupg \
     python3-pip

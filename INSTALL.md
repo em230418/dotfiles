@@ -48,3 +48,12 @@ gpg --import private*.pgp
 rm private*.pgp
 
 ```
+
+6. Настрой докер
+
+```
+
+usermod -aG docker $USER
+# и перезагрузись
+
+```
