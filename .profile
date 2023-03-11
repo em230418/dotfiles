@@ -60,8 +60,8 @@ function start_agent {
 
 # Source SSH settings, if applicable
 
-if [ -v "${SSH_AGENT_PID}"; then
-    # do nothing
+if [ -n "${SSH_AGENT_PID}" ]; then
+    echo 1 > /dev/null # do nothing
 elif [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     #ps ${SSH_AGENT_PID} doesn't work under cywgin
@@ -70,4 +70,8 @@ elif [ -f "${SSH_ENV}" ]; then
     }
 else
     start_agent;
+fi
+
+if [ -z "$GPG_TTY" ]; then
+    export GPG_TTY="$(tty)"
 fi
