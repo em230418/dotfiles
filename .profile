@@ -55,7 +55,6 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add;
 }
 
 # Source SSH settings, if applicable
@@ -72,6 +71,4 @@ else
     start_agent;
 fi
 
-if [ -z "$GPG_TTY" ]; then
-    export GPG_TTY="$(tty)"
-fi
+export GPG_TTY="$(tty)"
