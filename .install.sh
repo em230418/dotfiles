@@ -1,8 +1,12 @@
 apt-get install -y \
         curl \
         emacs-nox \
+        jq \
         i3 \
+        libdbus-glib-1-2 \  # для palemoon
         mc \
+        mpv \
+        pavucontrol \
         sudo \
         xserver-xorg \
         xinit \

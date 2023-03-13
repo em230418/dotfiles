@@ -8,5 +8,10 @@ apt install -y brave-browser
 apt install -y \
     docker.io \
     docker-compose \
+    geany \
     gnupg \
-    python3-pip
+    libreoffice \
+    postgresql-client \
+    python3-pip \
+    python3-virualenv \
+    telegram-desktop

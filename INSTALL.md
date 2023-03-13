@@ -57,3 +57,8 @@ usermod -aG docker $USER
 # и перезагрузись
 
 ```
+
+# TODO
+- python3 -m pip install "jedi<0.18"
+- lber.h not found
+- https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
