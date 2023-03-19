@@ -1,0 +1,8 @@
+(package-install 'ac-php)
+(package-install 'ace-window)
+(package-install 'auto-complete)
+(package-install 'jedi)
+(package-install 'js2-mode)
+(package-install 'magit)
+(package-install 'markdown-mode)
+(package-install 'web-mode)
