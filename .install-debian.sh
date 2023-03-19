@@ -11,7 +11,12 @@ apt install -y \
     geany \
     gnupg \
     libreoffice \
+    net-tools \
     postgresql-client \
     python3-pip \
     python3-virualenv \
+    shadowsocks-libev \
     telegram-desktop
+
+systemctl stop shadowsocks-libev
+systemctl disable shadowsocks-libev
