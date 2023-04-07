@@ -6,8 +6,10 @@ apt update
 
 apt install -y brave-browser
 apt install -y \
+    cal \
     docker.io \
     docker-compose \
+    flake8 \
     geany \
     gnupg \
     libreoffice \
@@ -15,8 +17,7 @@ apt install -y \
     postgresql-client \
     python3-pip \
     python3-virualenv \
-    shadowsocks-libev \
-    telegram-desktop
+    shadowsocks-libev
 
 systemctl stop shadowsocks-libev
 systemctl disable shadowsocks-libev
