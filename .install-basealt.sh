@@ -1,4 +1,4 @@
-apt install -y \
+apt-get install -y \
     eepm \
     emacs-cedet \
     emacs-nxml-mode \
@@ -7,3 +7,9 @@ apt install -y \
 
 eepm play brave
 eeom play telegram
+
+# wolfcamql
+apt-get install -y \
+    gcc-c++ \
+    libfreetype-devel \
+    libSDL2-devel

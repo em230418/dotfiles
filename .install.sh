@@ -6,6 +6,7 @@ apt-get install -y \
         libdbus-glib-1-2 \  # для palemoon
         mc \
         mpv \
+        nmap \
         pavucontrol \
         sudo \
         xserver-xorg \
