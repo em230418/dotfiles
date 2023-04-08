@@ -33,6 +33,7 @@
 
 (yas-global-mode)
 (menu-bar-mode -1)
+(remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; что это?
 ;; https://youtu.be/6BlTGPsjGJk?t=21m19s
