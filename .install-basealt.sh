@@ -2,6 +2,7 @@ apt-get install -y \
     eepm \
     emacs-cedet \
     emacs-nxml-mode \
+    mercurial \
     python3-module-pip \
     python3-module-virtualenv
 
