@@ -9,6 +9,7 @@ apt-get install -y \
         mpv \
         nmap \
         pavucontrol \
+        rsync \
         sudo \
         x2goclient \
         xserver-xorg \
