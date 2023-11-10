@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fna
+# key: fna
+# --
+<field name="arch" type="xml">
+$0
+</field>
