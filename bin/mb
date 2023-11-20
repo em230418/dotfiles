@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+PARAM=""
+if [ "$@" = "addon" ]; then
+    PARAM="--remember-answers"
+else
+    PWD=`pwd`
+    MODULE_NAME=`basename $PWD`
+    PARENT_DIR_FULL=`dirname $PWD`
+    PARENT_DIR=`basename $PARENT_DIR_FULL`
+    CONFIG="$PARENT_DIR_FULL/$MODULE_NAME.mrbob.ini"
+    if [ -f "$CONFIG" ]; then
+        PARAM="-c $CONFIG"
+    else
+        echo "File not found: $CONFIG"
+        exit 1
+    fi
+fi
+
+mrbob bobtemplates.itpp.odoo:$@ $PARAM
