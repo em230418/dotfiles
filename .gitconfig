@@ -9,7 +9,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = gpg2
 [alias]
 	rv = remote -v
         s = status
