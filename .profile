@@ -26,10 +26,10 @@ alias yd="youtube-dl --format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a
 alias auau='sudo apt-get update && sudo apt-get upgrade'  # надо регулярно обновляться
 alias tb="nc termbin.eugenemolotov.ru 9999"
 
-alias dcu="docker-compose up"
-alias dcd="docker-compose down"
-alias dcr="docker-compose run"
-alias dc="docker-compose"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcr="docker compose run"
+alias dc="docker compose"
 
 parse_git_branch() {
      git cb 2>/dev/null | sed -e 's/\(.*\)/(\1)/'
@@ -72,3 +72,4 @@ else
 fi
 
 export GPG_TTY="$(tty)"
+export BUILDKIT_PROGRESS=plain

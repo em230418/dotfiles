@@ -1,6 +1,6 @@
 apt-get install -y \
     docker-engine \
-    docker-compose \
+    docker-compose-v2 \
     eepm \
     emacs-cedet \
     emacs-nxml-mode \

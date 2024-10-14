@@ -8,7 +8,6 @@ apt install -y brave-browser
 apt install -y \
     cal \
     docker.io \
-    docker-compose \
     flake8 \
     geany \
     gnupg \
