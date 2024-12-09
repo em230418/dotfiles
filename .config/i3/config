@@ -193,6 +193,7 @@ set $ws_odoo_14 "Odoo 14.0"
 set $ws_odoo_15 "Odoo 15.0"
 set $ws_odoo_16 "Odoo 16.0"
 set $ws_odoo_17 "Odoo 17.0"
+set $ws_odoo_18 "Odoo 18.0"
 
 workspace 1 output eDP-1
 workspace 2 output eDP-1
@@ -213,14 +214,7 @@ workspace $ws_odoo_14 output eDP-1
 workspace $ws_odoo_15 output eDP-1
 workspace $ws_odoo_16 output eDP-1
 workspace $ws_odoo_17 output eDP-1
-
-# bindsym $mod+KP_Left   workspace 4
-# bindsym $mod+KP_Begin  workspace 5
-
-# bindsym $mod+KP_Right  workspace 6
-# bindsym $mod+KP_Home   workspace 7
-# bindsym $mod+KP_Up     workspace 8
-# bindsym $mod+KP_Prior  workspace 9
+workspace $ws_odoo_18 output eDP-1
 
 bindsym $mod+KP_Prior  workspace $ws_odoo_9
 bindsym $mod+KP_Insert workspace $ws_odoo_10
@@ -231,6 +225,7 @@ bindsym $mod+KP_Left   workspace $ws_odoo_14
 bindsym $mod+KP_Begin  workspace $ws_odoo_15
 bindsym $mod+KP_Right  workspace $ws_odoo_16
 bindsym $mod+KP_Home   workspace $ws_odoo_17
+bindsym $mod+KP_Up     workspace $ws_odoo_18
 
 bindsym $mod+KP_9      workspace $ws_odoo_9
 bindsym $mod+KP_0      workspace $ws_odoo_10
@@ -241,6 +236,7 @@ bindsym $mod+KP_4      workspace $ws_odoo_14
 bindsym $mod+KP_5      workspace $ws_odoo_15
 bindsym $mod+KP_6      workspace $ws_odoo_16
 bindsym $mod+KP_7      workspace $ws_odoo_17
+bindsym $mod+KP_8      workspace $ws_odoo_18
 
 bindsym $mod+Shift+KP_Prior  move container to workspace $ws_odoo_9
 bindsym $mod+Shift+KP_Insert move container to workspace $ws_odoo_10
@@ -250,6 +246,8 @@ bindsym $mod+Shift+KP_Next   move container to workspace $ws_odoo_13
 bindsym $mod+Shift+KP_Left   move container to workspace $ws_odoo_14
 bindsym $mod+Shift+KP_Begin  move container to workspace $ws_odoo_15
 bindsym $mod+Shift+KP_Right  move container to workspace $ws_odoo_16
+bindsym $mod+Shift+KP_Home   move container to workspace $ws_odoo_17
+bindsym $mod+Shift+KP_Up     move container to workspace $ws_odoo_18
 
 bindsym $mod+Shift+KP_9      move container to workspace $ws_odoo_9
 bindsym $mod+Shift+KP_0      move container to workspace $ws_odoo_10
@@ -259,15 +257,8 @@ bindsym $mod+Shift+KP_3      move container to workspace $ws_odoo_13
 bindsym $mod+Shift+KP_4      move container to workspace $ws_odoo_14
 bindsym $mod+Shift+KP_5      move container to workspace $ws_odoo_15
 bindsym $mod+Shift+KP_6      move container to workspace $ws_odoo_16
-
-
-# bindsym $mod+KP_4      workspace 4
-# bindsym $mod+KP_5      workspace 5
-
-# bindsym $mod+KP_6      workspace 6
-# bindsym $mod+KP_7      workspace 7
-# bindsym $mod+KP_8      workspace 8
-# bindsym $mod+KP_9      workspace 9
+bindsym $mod+Shift+KP_7      move container to workspace $ws_odoo_17
+bindsym $mod+Shift+KP_8      move container to workspace $ws_odoo_18
 
 # Окна следующих приложений при запуске не будут привязаны к сетке
 # (если в позже сами не привяжем)
