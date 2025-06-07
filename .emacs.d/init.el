@@ -250,6 +250,12 @@ Version 2016-06-19"
 
 
 (add-hook
+ 'nxml-mode-hook
+ (lambda ()
+   (flyspell-mode 0)
+   ))
+
+(add-hook
  'before-save-hook
  'delete-trailing-whitespace
  )
@@ -272,10 +278,18 @@ Version 2016-06-19"
    ))
 
 (add-hook
+ 'css-mode-hook
+ (lambda ()
+   (set-my-binds css-mode-map)
+   (setq css-indent-offset 2)
+   ))
+
+(add-hook
  'python-mode-hook
  (lambda()
    (jedi:setup)
    (set-my-binds python-mode-map)
+   (add-to-list 'flycheck-disabled-checkers 'python-mypy)
    (flycheck-mode)
    (define-key python-mode-map (kbd "C-p") 'jedi:goto-definition)
    (define-key python-mode-map (kbd "C-j") 'jedi:show-doc)
