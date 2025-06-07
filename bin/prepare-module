@@ -5,4 +5,4 @@ PACKAGE_NAME="${MODULE_NAME}_${DATE}"
 EXCLUDES=`cat $MODULE_NAME/.gitignore | sed -e "s!^!--exclude=$MODULE_NAME/!" | tr '\n' ' '`
 tar cvf $PACKAGE_NAME.tar $EXCLUDES --exclude=$MODULE_NAME/.git $MODULE_NAME/
 gzip $PACKAGE_NAME.tar
-mv $PACKAGE_NAME.tar.gz ~/tmp
+mv $PACKAGE_NAME.tar.gz /tmp
