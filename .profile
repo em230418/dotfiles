@@ -21,10 +21,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-alias y="mpv --ytdl-format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]'"  # через нее смотрю ютуб
-alias yd="youtube-dl --format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]'"  # через нее скачиваю видосики с ютуба. Потом себе на телефон
+alias y="mpv --proxy=socks4://127.0.0.1:1080 --ytdl-format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=mp4]'"  # через нее смотрю ютуб
+alias yd="youtube-dl --proxy=socks4://127.0.0.1:1080 --format 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=mp4]'"  # через нее скачиваю видосики с ютуба. Потом себе на телефон
 alias auau='sudo apt-get update && sudo apt-get upgrade'  # надо регулярно обновляться
 alias tb="nc termbin.eugenemolotov.ru 9999"
+alias sshp='ssh -o "ProxyCommand=nc -X connect -x 127.0.0.1:3128 %h %p"'
 
 alias dcu="docker compose up"
 alias dcd="docker compose down"
