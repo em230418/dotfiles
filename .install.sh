@@ -4,6 +4,7 @@ apt-get install -y \
         file \
         jq \
         i3 \
+        flameshot \
         libdbus-glib-1-2 \  # для palemoon
         mc \
         mpv \
