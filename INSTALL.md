@@ -22,6 +22,7 @@ git checkout origin/master -ft
 
 bash .install.sh
 bash .install-debian.sh  # только для Debian
+bash .install-basealt.sh  # только для ALT Linux
 
 ```
 
