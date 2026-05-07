@@ -184,7 +184,6 @@ bindsym Print exec xfce4-screenshooter
 bindsym Control+Mod1+l exec $i3lock_cmd
 bindsym $mod+t exec ~/bin/open-terminal
 
-set $ws_odoo_9 "Odoo 9.0"
 set $ws_odoo_10 "Odoo 10.0"
 set $ws_odoo_11 "Odoo 11.0"
 set $ws_odoo_12 "Odoo 12.0"
@@ -194,6 +193,8 @@ set $ws_odoo_15 "Odoo 15.0"
 set $ws_odoo_16 "Odoo 16.0"
 set $ws_odoo_17 "Odoo 17.0"
 set $ws_odoo_18 "Odoo 18.0"
+set $ws_odoo_19 "Odoo 19.0"
+set $ws_odoo_master "Odoo master"
 
 workspace 1 output eDP-1
 workspace 2 output eDP-1
@@ -205,7 +206,7 @@ workspace 7 output HDMI-1
 workspace 8 output HDMI-1
 workspace 9 output HDMI-1
 workspace 10 output eDP-1
-workspace $ws_odoo_9 output eDP-1
+workspace $ws_odoo_19 output eDP-1
 workspace $ws_odoo_10 output eDP-1
 workspace $ws_odoo_11 output eDP-1
 workspace $ws_odoo_12 output eDP-1
@@ -215,8 +216,9 @@ workspace $ws_odoo_15 output eDP-1
 workspace $ws_odoo_16 output eDP-1
 workspace $ws_odoo_17 output eDP-1
 workspace $ws_odoo_18 output eDP-1
+workspace $ws_odoo_master output eDP-1
 
-bindsym $mod+KP_Prior  workspace $ws_odoo_9
+bindsym $mod+KP_Prior  workspace $ws_odoo_19
 bindsym $mod+KP_Insert workspace $ws_odoo_10
 bindsym $mod+KP_End    workspace $ws_odoo_11
 bindsym $mod+KP_Down   workspace $ws_odoo_12
@@ -227,7 +229,7 @@ bindsym $mod+KP_Right  workspace $ws_odoo_16
 bindsym $mod+KP_Home   workspace $ws_odoo_17
 bindsym $mod+KP_Up     workspace $ws_odoo_18
 
-bindsym $mod+KP_9      workspace $ws_odoo_9
+bindsym $mod+KP_9      workspace $ws_odoo_19
 bindsym $mod+KP_0      workspace $ws_odoo_10
 bindsym $mod+KP_1      workspace $ws_odoo_11
 bindsym $mod+KP_2      workspace $ws_odoo_12
@@ -238,7 +240,9 @@ bindsym $mod+KP_6      workspace $ws_odoo_16
 bindsym $mod+KP_7      workspace $ws_odoo_17
 bindsym $mod+KP_8      workspace $ws_odoo_18
 
-bindsym $mod+Shift+KP_Prior  move container to workspace $ws_odoo_9
+bindsym $mod+m         workspace $ws_odoo_master
+
+bindsym $mod+Shift+KP_Prior  move container to workspace $ws_odoo_19
 bindsym $mod+Shift+KP_Insert move container to workspace $ws_odoo_10
 bindsym $mod+Shift+KP_End    move container to workspace $ws_odoo_11
 bindsym $mod+Shift+KP_Down   move container to workspace $ws_odoo_12
@@ -249,7 +253,7 @@ bindsym $mod+Shift+KP_Right  move container to workspace $ws_odoo_16
 bindsym $mod+Shift+KP_Home   move container to workspace $ws_odoo_17
 bindsym $mod+Shift+KP_Up     move container to workspace $ws_odoo_18
 
-bindsym $mod+Shift+KP_9      move container to workspace $ws_odoo_9
+bindsym $mod+Shift+KP_9      move container to workspace $ws_odoo_19
 bindsym $mod+Shift+KP_0      move container to workspace $ws_odoo_10
 bindsym $mod+Shift+KP_1      move container to workspace $ws_odoo_11
 bindsym $mod+Shift+KP_2      move container to workspace $ws_odoo_12
